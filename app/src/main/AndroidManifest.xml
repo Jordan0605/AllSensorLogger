@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.paul.all_sensor_logger" >
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <application
+        android:name=".VolleyController"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <!-- Auth0 Lock -->
+        <activity
+            android:name="com.auth0.android.lock.LockActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Lock.Theme">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="@string/auth0_domain"
+                    android:pathPrefix="/android/com.example.paul.all_sensor_logger/activities/callback"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.auth0.android.provider.WebAuthActivity"
+            android:theme="@style/Lock.Theme" />
+        <!-- Auth0 Lock End -->
+
+
+        <activity
+            android:name=".LoginPage"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".AgreementPage" />
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            />
+        <!-- <activity android:name=".LoginPage" /> -->
+        <activity android:name=".RegisterPage" />
+
+        <service
+            android:name=".NetworkCheckService"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </service>
+
+
+        <activity
+            android:name=".FakeLogin"
+            android:label="@string/title_activity_fake_login"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <activity
+            android:name=".EditProfile"
+            android:label="@string/title_activity_edit_profile"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <service android:name="com.example.paul.all_sensor_logger.bt.BTSerialPortCommunicationService" android:enabled="true"/>
+
+        <service
+            android:name=".LogAndUploadService"
+            android:enabled="true"
+            android:label="@string/app_name" />
+    </application>
+
+</manifest>

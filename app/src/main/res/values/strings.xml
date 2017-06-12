@@ -1,0 +1,23 @@
+<resources>
+    <string name="auth0_client_id">bVryuiBgSxL8fGEo7aRfcmpb1Qeu6kdV</string>
+    <string name="auth0_domain">liu12076.auth0.com</string>
+
+    <string name="app_name">iPave</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="URL">http://cswwwdev.cs.nctu.edu.tw:7122</string>
+    <string name="PREFS_NAME">my_pref</string>
+    <string name="title_activity_fake_login">FakeLogin</string>
+    <string name="title_activity_edit_profile">EditProfile</string>
+    <string name="action_logout">Logout</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="notification_title">Sensor Loging</string>
+    <string name="toggle_on">On</string>
+    <string name="toggle_off">Off</string>
+
+    <string name="GPS">GPS : </string>
+    <string name="Log_Data">Log Data : </string>
+    <string name="Log_Time">Log Time : </string>
+    <string name="Current_Car">Car : </string>
+</resources>

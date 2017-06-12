@@ -1,0 +1,31 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="MyLock.Theme" parent="Lock.Theme" />
+
+    <!-- Change to this Theme if you want to customize attrs -->
+    <style name="MyLock.Theme.Customized">
+        <item name="Auth0.HeaderBackground">@android:color/holo_red_light</item>
+        <item name="Auth0.HeaderLogo">@android:drawable/ic_popup_reminder</item>
+        <item name="Auth0.DarkPrimaryColor">@android:color/holo_blue_dark</item>
+        <item name="Auth0.PrimaryColor">@android:color/holo_blue_light</item>
+    </style>
+
+
+
+
+
+</resources>
